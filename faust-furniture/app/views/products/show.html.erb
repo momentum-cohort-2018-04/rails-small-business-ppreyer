@@ -1,0 +1,33 @@
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Item</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Condition</th>
+      <th>Dimension Width</th>
+      <th>Dimension Length</th>
+      <th>Dimension Height</th>
+      <th>Image</th>
+      <th>Quantity</th>
+      <th>Category</th>
+    </tr>
+  </thead>
+    <tbody>  
+      <tr>
+        <td><%= @products.pid %></td>
+        <td><%= @products.item %></td>
+        <td><%= @products.description %></td>
+        <td><%= @products.price %></td>
+        <td><%= @products.condition %></td>
+        <td><%= @products.dimension_w %></td>
+        <td><%= @products.dimension_l %></td>
+        <td><%= @products.dimension_h %></td>
+        <td><%= @products.img_file %></td>
+        <td><%= @products.quantity %></td>
+        <td><%= @products.category %></td>
+        <td><%= link_to "View Product List", "/products" %></td>
+      <tr>
+    </tbody>
+</table>
