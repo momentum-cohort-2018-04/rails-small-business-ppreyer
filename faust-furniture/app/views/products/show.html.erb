@@ -1,5 +1,15 @@
-<table>
-  <thead>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">
+        Home
+      </a>
+    </div>
+  </div>
+</nav>
+<div class="table-responsive">
+<table class="table table-bordered">
+  <thead class="thead-light">
     <tr>
       <th>Id</th>
       <th>Item</th>
@@ -12,6 +22,7 @@
       <th>Image</th>
       <th>Quantity</th>
       <th>Category</th>
+      <th>Product List</th>
     </tr>
   </thead>
     <tbody>  
@@ -24,10 +35,11 @@
         <td><%= @products.dimension_w %></td>
         <td><%= @products.dimension_l %></td>
         <td><%= @products.dimension_h %></td>
-        <td><%= @products.img_file %></td>
+        <td><%= image_tag("#{@products.img_file}.jpg", size: 100) %></td>
         <td><%= @products.quantity %></td>
         <td><%= @products.category %></td>
         <td><%= link_to "View Product List", "/products" %></td>
       <tr>
     </tbody>
 </table>
+</div>

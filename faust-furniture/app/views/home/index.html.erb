@@ -1,0 +1,20 @@
+<div class="page-header col-md-12">
+</div>
+
+<h3>Faust's Furniture Store | <span class="label label-default"><%= link_to "View Products", "/products" %></span></h3> 
+
+<h4><span><form action="/products" method="get">
+<label for="furniture_type">Select by Furniture Type</label>
+<select name="furniture_type">
+  <option value=""></option>
+  <option value="1" selected="selected">bedroom</option>
+  <option value="2">desk</option>
+  <option value="3">miscellaneous</option>
+  <option value="4">seating</option>
+  <option value="5">storage</option>
+  <option value="6">tables</option>
+</select>
+
+<button class="btn btn-primary">Submit</button>
+</form></span></h4>
+

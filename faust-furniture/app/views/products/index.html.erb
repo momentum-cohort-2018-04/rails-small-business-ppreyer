@@ -1,7 +1,15 @@
-<h1>Hello World</h1>
-
-<table>
-  <thead>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">
+        Home
+      </a>
+    </div>
+  </div>
+</nav>
+<div class="table-responsive">
+<table class="table table-bordered" >
+  <thead class="thead-light">
     <tr>
       <th>Id</th>
       <th>Item</th>
@@ -14,6 +22,7 @@
       <th>Image</th>
       <th>Quantity</th>
       <th>Category</th>
+      <th>Product List</th>
     </tr>
   </thead>
   <% @products.each do |product| %>
@@ -27,7 +36,7 @@
         <td><%= product.dimension_w %></td>
         <td><%= product.dimension_l %></td>
         <td><%= product.dimension_h %></td>
-        <td><%= product.img_file %></td>
+        <td><%= image_tag("#{product.img_file}" + ".jpeg", size: 50) %></td>
         <td><%= product.quantity %></td>
         <td><%= product.category %></td>
         <td><%= link_to "View Details", "/products/#{product.pid}" %></td>
@@ -35,3 +44,4 @@
     </tbody>
   <% end %>
 </table>
+</div>
