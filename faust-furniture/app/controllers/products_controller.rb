@@ -27,10 +27,10 @@ class ProductsController < ApplicationController
       @products = @products.select { |p| p.quantity.to_i > 0 }
       @products = @products.map do |p|
         if p.condition == "good"
-          p.price = p.price.to_f + (p.price.to_f * 0.1)
+          p.price = p.price.to_f - (p.price.to_f * 0.1)
           p.price = "#{p.price} (clearance)"
         elsif p.condition == "average"
-          p.price = p.price.to_f + (p.price.to_f * 0.2)
+          p.price = p.price.to_f - (p.price.to_f * 0.2)
           p.price = "#{p.price} (clearance)"
         else 
           p.price = p.price.to_f
