@@ -1,0 +1,47 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">
+        Home
+      </a>
+    </div>
+  </div>
+</nav>
+<div class="table-responsive">
+<table class="table table-bordered" >
+  <thead class="thead-light">
+    <tr>
+      <th>Id</th>
+      <th>Item</th>
+      <th>Description</th>
+      <th>Price($)</th>
+      <th>Condition</th>
+      <th>Dimension Width</th>
+      <th>Dimension Length</th>
+      <th>Dimension Height</th>
+      <th>Image</th>
+      <th>Quantity</th>
+      <th>Category</th>
+      <th>Product List</th>
+    </tr>
+  </thead>
+  <% @products.each do |product| %>
+    <tbody>  
+      <tr>
+        <td><%= product.pid %></td>
+        <td><%= product.item %></td>
+        <td><%= product.description %></td>
+        <td><%= product.price %></td>
+        <td><%= product.condition %></td>
+        <td><%= product.dimension_w %></td>
+        <td><%= product.dimension_l %></td>
+        <td><%= product.dimension_h %></td>
+        <td><%= image_tag("#{product.img_file}" + ".jpeg", size: 50) %></td>
+        <td><%= product.quantity %></td>
+        <td><%= product.category %></td>
+        <td><%= link_to "View Details", "/products/#{product.pid}" %></td>
+      <tr>
+    </tbody>
+  <% end %>
+</table>
+</div>

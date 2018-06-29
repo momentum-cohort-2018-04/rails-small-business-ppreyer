@@ -1,0 +1,20 @@
+.page-header {
+  height: 400px;
+  background-image: url("hero.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+h3, h4 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+form {
+  margin-top: 20px;
+}
+
+button {
+  margin-bottom: 5px;
+}
